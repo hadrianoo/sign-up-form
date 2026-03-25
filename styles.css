@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Aldrich';
+    src: url('fonts/Aldrich-Regular.woff2') format('woff2'),
+        url('fonts/Aldrich-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    border: 1px solid red;
+}
+
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    flex: auto;
+
+}
+
+.container-logo {
+    background-image: url("images/background.jpg");
+
+    border: 1px solid black;
+}
+
+.logo {
+    width: 300px;
+}
+
+
+/* 
+
+.container-form {
+
+}
+
+.header {
+
+} */
+
+form {
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
