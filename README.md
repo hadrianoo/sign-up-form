@@ -6,7 +6,7 @@ This project is a sign-up form for an imaginary service.
 
 The goal of this project was to:
 
-- creating form 
+- create form 
 
 ## Technologies Used
 
