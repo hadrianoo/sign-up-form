@@ -14,12 +14,10 @@
         1.3px 1.6px 2.1px -1.1px hsl(var(--shadow-color) / 0.42),
         3.6px 4.4px 5.7px -2.2px hsl(var(--shadow-color) / 0.36),
         9.4px 11.6px 14.9px -3.3px hsl(var(--shadow-color) / 0.3);
-    --right-column-shift: -20px;
+    --right-column-shift: -70px;
 }
 
-/* * {
-    border: 1px solid red;
-} */
+
 
 
 body {
@@ -189,7 +187,7 @@ button:active {
 
 .third-row {
     position: relative;
-    top: 80px;
+    top: 30px;
     margin-left: 44px;
 }
 
