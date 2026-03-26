@@ -15,9 +15,13 @@
                 <img src="images/logo.png" alt="TOP project logo">
                 <div>ODIN</div>
             </div>
+            <div>
+                Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
+                    href="https://unsplash.com/">Unsplash</a>
+            </div>
         </div>
         <div class="right-wrapper">
-            <div class="header">
+            <div class="first-row">
                 <p>
                     This is not a real online service! You know you need something like this in your life to help you
                     realize your deepest dreams.
@@ -25,27 +29,27 @@
                 <p>Sign up <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <form action="" method="get">
+            <form action="/" method="get">
                 <div class="col one">
                     <legend>Let's do this!</legend>
                     <label for="first">first name</label>
-                    <input type="text" id="first" name="first-name">
+                    <input type="text" id="first" name="first-name" maxlength="20">
                     <label for="email">email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" maxlength="20">
                     <label for="password">password</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required maxlength="20">
                 </div>
                 <div class="col two">
                     <label for="last">last name</label>
-                    <input type="text" id="last" name="last-name">
+                    <input type="text" id="last" name="last-name" maxlength="20">
                     <label for="phone">phone number</label>
-                    <input type="tel" id="phone" name="email">
+                    <input type="tel" id="phone" name="email" maxlength="20">
                     <label for="confirm-password">confirm password</label>
-                    <input type="password" id="confirm-password" name="confirm-password">
+                    <input type="password" id="confirm-password" name="confirm-password" required maxlength="20">
                 </div>
+                <button type="submit" value="sign-up">Create Account</button>
             </form>
-            <div class="footer">
-                <button>Create Account</button>
+            <div class="third-row">
                 <p>
                     Already have an account? <a href="">Log in</a>
                 </p>

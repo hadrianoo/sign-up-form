@@ -10,11 +10,10 @@
 :root {
     --shadow-color: 210deg 5% 51%;
     --shadow-elevation:
-        0px 0.8px 0.6px hsl(var(--shadow-color) / 0.76),
-        0px 1.1px 0.8px -1.2px hsl(var(--shadow-color) / 0.6),
-        0px 3px 2.3px -2.5px hsl(var(--shadow-color) / 0.45),
-        0px 8.3px 6.2px -3.7px hsl(var(--shadow-color) / 0.3),
-        -0.1px 18.6px 14px -5px hsl(var(--shadow-color) / 0.15);
+        0.5px 0.6px 0.8px hsl(var(--shadow-color) / 0.48),
+        1.3px 1.6px 2.1px -1.1px hsl(var(--shadow-color) / 0.42),
+        3.6px 4.4px 5.7px -2.2px hsl(var(--shadow-color) / 0.36),
+        9.4px 11.6px 14.9px -3.3px hsl(var(--shadow-color) / 0.3);
     --right-column-shift: -20px;
 }
 
@@ -31,7 +30,6 @@ body {
 
 
 .container {
-
     left: 0;
     margin: auto;
     display: flex;
@@ -39,8 +37,10 @@ body {
     justify-content: center;
 }
 
-.left-wrapper {
+/* ------------left column------------------ */
 
+.left-wrapper {
+    position: relative;
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
@@ -60,10 +60,7 @@ body {
     flex-grow: 1;
     width: 520px;
     height: 140px;
-
     padding: 10px 0;
-
-
 }
 
 .logo-wrapper div {
@@ -71,22 +68,35 @@ body {
     font-size: 72px;
     color: white;
     align-self: center;
-
 }
 
-.right-wrapper {
+.left-wrapper>div:last-child {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    color: white;
+}
 
+.left-wrapper a {
+    color: white;
+}
+
+/* ---------------right column--------------- */
+
+.right-wrapper {
     display: flex;
     flex-grow: 2;
     flex-direction: column;
     justify-content: center;
 }
 
-.header {
+/* -----------first-row------------ */
+
+.first-row {
     position: relative;
     top: var(--right-column-shift);
     margin-left: 44px;
-
     font-weight: 600;
     font-size: 24px;
     display: flex;
@@ -97,19 +107,19 @@ body {
 p {
     margin: 0px;
     width: 700px;
-
 }
 
-.header>p:last-child {
+.first-row>p:last-child {
     margin: 30px 0 40px 0;
 }
 
+/* -----------form------------ */
 
 form {
     position: relative;
     top: var(--right-column-shift);
     background-color: white;
-    padding: 12px 0px 12px 44px;
+    padding: 12px 0 12px 44px;
     display: flex;
     flex-direction: row;
     gap: 48px;
@@ -120,6 +130,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-bottom: 14px;
 
 }
 
@@ -133,40 +144,61 @@ label {
     margin: 12px 0 4px 0;
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 650;
     letter-spacing: 15%;
 }
 
 input {
-    font-size: 26px;
+    font-size: 24px;
     border-radius: 4px;
     border: 1px solid #E5E7EB;
+    padding: 2px 12px;
 }
 
-.footer {
-    position: relative;
-    top: var(--right-column-shift);
-    margin-left: 44px;
+input[type=password]:invalid {
+    outline: 1px solid #c00000;
+}
+
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus {
+    outline: 1px solid #3131f1;
+    box-shadow: var(--shadow-elevation);
 }
 
 button {
+    position: absolute;
+    top: 280px;
     box-shadow: var(--shadow-elevation);
     font-weight: 600;
     font-size: 18px;
+    color: white;
     margin: 30px 0;
     background-color: #596D48;
     border: none;
     border-radius: 6px;
-    color: white;
     padding: 12px 50px;
 }
 
-.footer p {
+button:active {
+    opacity: 0.9;
+}
+
+/* -----------third-row------------ */
+
+.third-row {
+    position: relative;
+    top: 80px;
+    margin-left: 44px;
+}
+
+.third-row p {
     font-size: 18px;
     font-weight: 600;
 }
 
-a {
+.third-row a {
     text-decoration: none;
     color: #596D48;
     font-weight: 700;
