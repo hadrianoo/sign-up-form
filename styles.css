@@ -15,9 +15,12 @@
         0px 3px 2.3px -2.5px hsl(var(--shadow-color) / 0.45),
         0px 8.3px 6.2px -3.7px hsl(var(--shadow-color) / 0.3),
         -0.1px 18.6px 14px -5px hsl(var(--shadow-color) / 0.15);
+    --right-column-shift: -20px;
 }
 
-
+/* * {
+    border: 1px solid red;
+} */
 
 
 body {
@@ -28,7 +31,8 @@ body {
 
 
 .container {
-    position: relative;
+
+    left: 0;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -36,19 +40,42 @@ body {
 }
 
 .left-wrapper {
+
     background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 950px;
 }
 
-.logo {
+.logo-wrapper {
+    box-sizing: border-box;
+    background-color: rgba(29, 28, 28, 0.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    top: 210px;
     margin: auto;
     flex-grow: 1;
     width: 520px;
-    height: 200px;
-    background-color: darkgray;
-    opacity: 0.5;
+    height: 140px;
+
+    padding: 10px 0;
+
+
+}
+
+.logo-wrapper div {
+    font-family: "Aldrich";
+    font-size: 72px;
+    color: white;
+    align-self: center;
+
 }
 
 .right-wrapper {
+
     display: flex;
     flex-grow: 2;
     flex-direction: column;
@@ -56,8 +83,10 @@ body {
 }
 
 .header {
+    position: relative;
+    top: var(--right-column-shift);
     margin-left: 44px;
-    height: 350px;
+
     font-weight: 600;
     font-size: 24px;
     display: flex;
@@ -77,6 +106,8 @@ p {
 
 
 form {
+    position: relative;
+    top: var(--right-column-shift);
     background-color: white;
     padding: 12px 0px 12px 44px;
     display: flex;
@@ -113,8 +144,9 @@ input {
 }
 
 .footer {
+    position: relative;
+    top: var(--right-column-shift);
     margin-left: 44px;
-    height: 350px;
 }
 
 button {
@@ -127,7 +159,6 @@ button {
     border-radius: 6px;
     color: white;
     padding: 12px 50px;
-
 }
 
 .footer p {
