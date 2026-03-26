@@ -7,48 +7,62 @@
     font-display: swap;
 }
 
-/* * {
-    border: 1px solid red;
-} */
+:root {
+    --shadow-color: 210deg 5% 51%;
+    --shadow-elevation:
+        0px 0.8px 0.6px hsl(var(--shadow-color) / 0.76),
+        0px 1.1px 0.8px -1.2px hsl(var(--shadow-color) / 0.6),
+        0px 3px 2.3px -2.5px hsl(var(--shadow-color) / 0.45),
+        0px 8.3px 6.2px -3.7px hsl(var(--shadow-color) / 0.3),
+        -0.1px 18.6px 14px -5px hsl(var(--shadow-color) / 0.15);
+}
+
+
+
 
 body {
+    background-color: #f9fafb;
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .container {
-
+    position: relative;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.container-logo {
+.left-wrapper {
     background-image: url("images/background.jpg");
 }
 
 .logo {
+    margin: auto;
     flex-grow: 1;
     width: 520px;
-
+    height: 200px;
+    background-color: darkgray;
+    opacity: 0.5;
 }
 
-.container-form {
+.right-wrapper {
+    display: flex;
     flex-grow: 2;
-    margin-left: 44px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header {
+    margin-left: 44px;
+    height: 350px;
     font-weight: 600;
     font-size: 24px;
-    height: 300px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
 }
 
 p {
@@ -57,18 +71,21 @@ p {
 
 }
 
+.header>p:last-child {
+    margin: 30px 0 40px 0;
+}
+
 
 form {
-    margin: 12px 0px;
-
+    background-color: white;
+    padding: 12px 0px 12px 44px;
     display: flex;
     flex-direction: row;
     gap: 48px;
-
+    box-shadow: var(--shadow-elevation);
 }
 
 .col {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -78,26 +95,48 @@ form {
 legend {
     margin-bottom: 12px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 label {
-    margin-top: 8px;
+    margin: 12px 0 4px 0;
     text-transform: uppercase;
     font-size: 12px;
-
+    font-weight: 500;
+    letter-spacing: 15%;
 }
 
 input {
-    font-size: 20px;
+    font-size: 26px;
     border-radius: 4px;
     border: 1px solid #E5E7EB;
 }
 
-
-
-
 .footer {
+    margin-left: 44px;
+    height: 350px;
+}
+
+button {
+    box-shadow: var(--shadow-elevation);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
+    margin: 30px 0;
+    background-color: #596D48;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 12px 50px;
+
+}
+
+.footer p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 700;
 }
